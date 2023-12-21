@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    printf("Name: yaswini\nReg no: 192324021\n");
+    int n;
+    printf("Enter the number of terms for Fibonacci series: ");
+    scanf("%d", &n);
+    int n1=0,n2=1,t;
+    printf("Fibonacci Series up to %d terms:\n", n);
+    printf("%d, %d, ",n1, n2);
+    for (int i = 3; i <= n; ++i) {
+        t=n1+n2;
+        printf("%d, ",t);
+        n1=n2;
+        n2=t;
+    }
+    printf("\n");
+}
