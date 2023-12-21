@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main(){
+	printf("Name: yaswini\nReg no: 192324021\n");
+	int r,c,i,j;
+	printf("Enter the row and column of the Matrice:");
+	scanf("%d %d",&r,&c);
+	
+	printf("\nEnter the elements of Matrix :\n");
+	int mat[r][c];
+	for(i=0;i<r;i++){
+		for(j=0;j<c;j++)
+		scanf("%d",&mat[i][j]);
+	}
+	if(r!=c){
+		printf("\nThe given matrix is not a square matrix");
+	}
+	int sum=0,n=0;
+	while(n<r){
+		sum+=mat[n][n];
+		n++;
+	}
+	printf("\nThe sum of the diagonals is %d",sum);
+}
