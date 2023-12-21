@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int main() {
+    cout<<"Name: yaswini"<<"\n"<<"Reg no: 192324021"<<"\n";
+    int r, c, i, j;
+    cout<<"Enter the row and column of the Matrice:";
+    cin>>r>>c;
+    cout<<"\nEnter the elements of Matrix :";
+    int mat[r][c];
+    for (i = 0; i < r; i++) {
+        for (j = 0; j < c; j++)
+            cin>>mat[i][j];
+    }
+    if (r != c) {
+        cout<<"\nThe given matrix is not a square matrix";
+        return 0;
+    }
+    int transpose[c][r];
+    for (i = 0; i < r; i++) {
+        for (j = 0; j < c; j++)
+            transpose[j][i] = mat[i][j];
+    }
+    cout<<"\nThe transpose of the matrix is:\n";
+    for (i = 0; i < c; i++) {
+        for (j = 0; j < r; j++)
+            cout<<transpose[i][j];
+        cout<<"\n";
+    }
+    return 0;
+}
