@@ -43,13 +43,13 @@ Day 4 -  Doubly and Circular Linked List<br />
 4.2.Implement Singly CLL with following operations(Insert(Beg,Mid,End),Delete(Beg,Mid,End),Display,Search,Sort,Find Max and Min)<br />
 
 Day 5 -Stack<br /r>
-5.1.Implement Stack using array with following operations(Push(),Pop(),Display( ),Peek( ))<br /r>
-5.2.Implement Stack using Linked List with following operations(Push(),Pop(),Display( ),Peek( ))<br /r>
-5.3.Consider 2 stacks, add bottom most element and top most element print the value<br /r>
-5.4.Given a stack, delete the middle element of the stack without using any additional data structure<br /r>
-Middle element:- floor((size_of_stack+1)/2) (1-based indexing) from bottom of the stack<br /r>
+5.1.Implement Stack using array with following operations(Push(),Pop(),Display( ),Peek( ))<br />
+5.2.Implement Stack using Linked List with following operations(Push(),Pop(),Display( ),Peek( ))<br />
+5.3.Consider 2 stacks, add bottom most element and top most element print the value<br />
+5.4.Given a stack, delete the middle element of the stack without using any additional data structure<br />
+Middle element:- floor((size_of_stack+1)/2) (1-based indexing) from bottom of the stack<br />
 
 Day 6 -Infix and Postfix
-6.1.Write a function that takes a string containing parentheses , square brackets and curly braces " ( { [ ] } " and determines if the symbols are balanced<br /r>
-6.2.Write a function to evaluate a given postfix expression. The expression is "44 2 / 6 -"<br /r>
-6.3.Write a function to convert an infix expression to postfix notation. The infix expression is " "(a + b) * c + d "<br /r>
+6.1.Write a function that takes a string containing parentheses , square brackets and curly braces " ( { [ ] } " and determines if the symbols are balanced<br />
+6.2.Write a function to evaluate a given postfix expression. The expression is "44 2 / 6 -"<br />
+6.3.Write a function to convert an infix expression to postfix notation. The infix expression is " "(a + b) * c + d "<br />
