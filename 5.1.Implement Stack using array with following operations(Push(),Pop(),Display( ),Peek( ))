@@ -1,0 +1,99 @@
+#include<stdio.h>
+struct node
+{
+	int data;
+	struct node *next;
+}*top,*n;
+void push(int num)
+{
+	n=(struct node*)malloc(sizeof(struct node));
+	if(!n)
+	{
+		printf("\nOverflow");
+		exit(1);
+	}
+	else
+	{
+		n->data=num;
+		n->next=top;
+		top=n;
+	}
+}
+void pop()
+{
+	struct node *t;
+	if(!n)
+	{
+		printf("\nOverflow");
+		exit(1);
+	}
+	else
+	{
+		t=top;
+		top=top->next;
+		t->next=NULL;
+		free(t);
+		printf("\n\nTop element deleted successfully...\n\n");
+	}
+}
+void disp()
+{
+	struct node *t;
+	if(!n)
+	{
+		printf("\nOverflow");
+		exit(1);
+	}
+	else
+	{
+		t=top;
+		printf("\nElements in the stacks are:  ");
+		while(t!=NULL)
+		{
+			printf("%d ",t->data);
+			t=t->next;
+		}
+		printf("\n\n");
+	}
+	
+}
+void peek()
+{
+	if(!n)
+	{
+		printf("\nOverflow");
+		exit(1);
+	}
+	else
+	{
+		printf("\n Top element in the stack: %d",top->data);
+	}
+}
+int main()
+{
+	printf("Name: yaswini\nReg No: 192324021\n");
+		printf("\nThe choices\n1.Push\n2.Pop\n3.Display\n4.Peek\n\n");
+	int a=0,b=0;
+	while(a!=5)
+	{
+		printf("Enter your choice:");
+		scanf("%d",&a);
+		switch(a){
+			case 1:
+				printf("Enter a number:");
+				scanf("%d",&b);
+				push(b);
+				break;
+			case 2:
+				pop();
+				break;
+			case 3:
+				disp();
+				break;
+			case 4:
+				peek();
+				break;
+		}
+	}
+	return 0;
+}
