@@ -42,7 +42,7 @@ Day 4 -  Doubly and Circular Linked List<br />
 4.1.Implement DLL with following operations(Insert(Beg,Mid,End),Delete(Beg,Mid,End),Display,Search,Sort,Find Max and Min)<br />
 4.2.Implement Singly CLL with following operations(Insert(Beg,Mid,End),Delete(Beg,Mid,End),Display,Search,Sort,Find Max and Min)<br />
 
-Day 5 -Stack<br /r>
+Day 5 -Stack<br />
 5.1.Implement Stack using array with following operations(Push(),Pop(),Display( ),Peek( ))<br />
 5.2.Implement Stack using Linked List with following operations(Push(),Pop(),Display( ),Peek( ))<br />
 5.3.Consider 2 stacks, add bottom most element and top most element print the value<br />
