@@ -1,0 +1,118 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct QueueNode 
+{
+    int data;
+    struct QueueNode *next;
+};
+struct Queue 
+{
+    struct QueueNode *front, *rear;
+};
+void initializeQueue(struct Queue *queue) 
+{
+    queue->front = queue->rear = NULL;
+}
+int isQueueEmpty(struct Queue *queue) 
+{
+    return (queue->front == NULL);
+}
+void enqueue(struct Queue *queue, int value) 
+{
+    struct QueueNode *newNode = (struct QueueNode *)malloc(sizeof(struct QueueNode));
+    if (newNode == NULL)
+	 {
+        printf("Memory allocation failed. Cannot enqueue.\n");
+        return;
+    }
+    newNode->data = value;
+    newNode->next = NULL;
+    if (isQueueEmpty(queue)) 
+	{
+        queue->front = queue->rear = newNode;
+    } 
+	else 
+	{
+        queue->rear->next = newNode;
+        queue->rear = newNode;
+    }
+}
+int dequeue(struct Queue *queue) 
+{
+    if (isQueueEmpty(queue)) 
+	{
+        printf("Queue is empty. Cannot dequeue.\n");
+        return -1;
+    }
+    struct QueueNode *temp = queue->front;
+    int data = temp->data;
+    queue->front = temp->next;
+    if (queue->front == NULL) 
+	{
+        queue->rear = NULL;
+    }
+    free(temp);
+    return data;
+}
+struct Stack 
+{
+    struct Queue *q1;
+    struct Queue *q2;
+};
+void initializeStack(struct Stack *stack) 
+{
+    stack->q1 = (struct Queue *)malloc(sizeof(struct Queue));
+    stack->q2 = (struct Queue *)malloc(sizeof(struct Queue));
+    initializeQueue(stack->q1);
+    initializeQueue(stack->q2);
+}
+int isStackEmpty(struct Stack *stack) 
+{
+    return isQueueEmpty(stack->q1);
+}
+void push(struct Stack *stack, int value) 
+{
+    enqueue(stack->q2, value);
+    while (!isQueueEmpty(stack->q1)) 
+	{
+        enqueue(stack->q2, dequeue(stack->q1));
+    }
+    struct Queue *temp = stack->q1;
+    stack->q1 = stack->q2;
+    stack->q2 = temp;
+}
+int pop(struct Stack *stack)
+ {
+    if (isStackEmpty(stack)) 
+	{
+        printf("Stack is empty. Cannot pop.\n");
+        return -1;
+    }
+    return dequeue(stack->q1);
+}
+void displayStack(struct Stack *stack) 
+{
+    struct QueueNode *current = stack->q1->front;
+    printf("Stack: ");
+    while (current != NULL) 
+	{
+        printf("%d ", current->data);
+        current = current->next;
+    }
+    printf("\n");
+}
+int main() 
+{
+	printf("Name: yaswini\nReg No:192324021\n");
+    struct Stack myStack;
+    initializeStack(&myStack);
+    push(&myStack, 5);
+    push(&myStack, 4);
+    push(&myStack, 3);
+    push(&myStack, 2);
+    push(&myStack, 1);
+    displayStack(&myStack);
+    printf("Pop: %d\n", pop(&myStack));
+    displayStack(&myStack);
+    return 0;
+}
