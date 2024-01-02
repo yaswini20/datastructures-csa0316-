@@ -1,0 +1,120 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+struct Node 
+{
+    int data;
+    struct Node *next;
+};
+struct CircularQueue 
+{
+    struct Node *front;
+    struct Node *rear;
+};
+void initializeCircularQueue(struct CircularQueue *cq)
+{
+    cq->front = NULL;
+    cq->rear = NULL;
+}
+bool isEmpty(struct CircularQueue *cq)
+{
+    return (cq->front == NULL);
+}
+void enqueue(struct CircularQueue *cq, int value) 
+{
+    struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
+    if (newNode == NULL)
+	{
+        printf("Memory allocation failed. Cannot enqueue.\n");
+        return;
+    }
+    newNode->data = value;
+    newNode->next = NULL;
+    if (isEmpty(cq)) 
+	{
+        
+        cq->front = newNode;
+        cq->rear = newNode;
+        newNode->next = newNode; 
+    } 
+	else 
+	{
+       
+        cq->rear->next = newNode;
+        cq->rear = newNode;
+        newNode->next = cq->front;
+    }
+}
+void dequeue(struct CircularQueue *cq)
+ {
+    if (isEmpty(cq)) 
+	{
+        printf("Queue is empty. Cannot dequeue.\n");
+        return;
+    }
+    struct Node *temp = cq->front;
+    if (cq->front == cq->rear) 
+	{
+        cq->front = NULL;
+        cq->rear = NULL;
+    } 
+	else 
+	{
+        cq->front = cq->front->next;
+        cq->rear->next = cq->front; 
+    }
+    free(temp);
+}
+void display(struct CircularQueue *cq)
+ {
+    if (isEmpty(cq))
+	{
+    	
+        printf("Queue is empty.\n");
+        return;
+    }
+    struct Node *current = cq->front;
+    do 
+	{
+        printf("%d ", current->data);
+        current = current->next;
+    } 
+	while (current != cq->front);
+    printf("\n");
+}
+int front(struct CircularQueue *cq)
+ {
+    if (isEmpty(cq)) {
+        printf("Queue is empty.\n");
+        return -1;
+    }
+    return cq->front->data;
+}
+int rear(struct CircularQueue *cq)
+ {
+    if (isEmpty(cq)) 
+	{
+        printf("Queue is empty.\n");
+        return -1; 
+    }
+    return cq->rear->data;
+}
+int main() 
+{
+	printf("Name: Yasawini\nReg No:192324021\n");
+    struct CircularQueue myCircularQueue;
+    initializeCircularQueue(&myCircularQueue);
+    enqueue(&myCircularQueue, 1);
+    enqueue(&myCircularQueue, 2);
+    enqueue(&myCircularQueue, 3);
+    enqueue(&myCircularQueue, 4);
+    enqueue(&myCircularQueue, 5);
+    printf("Circular Queue: ");
+    display(&myCircularQueue);
+    printf("Front element: %d\n", front(&myCircularQueue));
+    printf("Rear element: %d\n", rear(&myCircularQueue));
+    dequeue(&myCircularQueue);
+    printf("Circular Queue after dequeue: ");
+    display(&myCircularQueue);
+    return 0;
+}
