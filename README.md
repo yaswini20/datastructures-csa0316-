@@ -54,15 +54,15 @@ Day 6 -Infix and Postfix<br />
 6.2.Write a function to evaluate a given postfix expression. The expression is "44 2 / 6 -"<br />
 6.3.Write a function to convert an infix expression to postfix notation. The infix expression is " "(a + b) * c + d "<br />
 
-Day 7 -Queue<br\ >
-7.1. Implement Queue using array with following operations[ Enqueue( ) Dequeue( ) isEmpty( ) isFull( ) Display( ) front( ) orPeek( ) rear( )]<br\ >
-7.2. Implement Queue using Linked List with following operations [Enqueue( ) Dequeue( ) Display( ) Front( ) Rear( )]<br\ >
-7.3. Implement CircularQueue using array with following operations [Enqueue( ) Dequeue( ) isEmpty( ) isFull( ) Display( ) front( ) orPeek( ) rear( )]<br\ >
-7.4. Implement CircularQueue using Linked List with following operations [Enqueue( ) Dequeue( ) Display( ) Front( ) Rear( )]<br\ >
-7.5. Implement Stack using two queues<br\ >
-7.6. Implement Queue using two Stacks<br\ >
+Day 7 -Queue<br/ >
+7.1. Implement Queue using array with following operations[ Enqueue( ) Dequeue( ) isEmpty( ) isFull( ) Display( ) front( ) orPeek( ) rear( )]<br />
+7.2. Implement Queue using Linked List with following operations [Enqueue( ) Dequeue( ) Display( ) Front( ) Rear( )]<br />
+7.3. Implement CircularQueue using array with following operations [Enqueue( ) Dequeue( ) isEmpty( ) isFull( ) Display( ) front( ) orPeek( ) rear( )]<br/>
+7.4. Implement CircularQueue using Linked List with following operations [Enqueue( ) Dequeue( ) Display( ) Front( ) Rear( )]<br />
+7.5. Implement Stack using two queues<br />
+7.6. Implement Queue using two Stacks<br />
 
-Day 8 -Tree<br\ >
-8.1. Implement Binary tree<br\ >
-8.2. Implement Binary Search Tree and perform Insertion and Deletion<br\ >
-8.3. Create Binary Search Tree with Tree Traversal (Inorder, Preorder, Postorder and Level order<br\ >
+Day 8 -Tree<br />
+8.1. Implement Binary tree<br />
+8.2. Implement Binary Search Tree and perform Insertion and Deletion<br />
+8.3. Create Binary Search Tree with Tree Traversal (Inorder, Preorder, Postorder and Level order<br />
