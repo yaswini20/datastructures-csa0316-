@@ -77,3 +77,15 @@ Day 10<br />
 Day 11<br />
 11.1. Implement a C Program for B Tree and perform Insertion of Nodes<br />
 11.2. Implement a C Program for TRIE Tree and perform Insertion  of Nodes<br />
+
+Day 12 -Hashing<br />
+12.1. Implement a C Program to perform Hashing with all collision resolving techniques<br />
+12.2. Implement a C Program for Min Heap and Max Heap and perform Insertion of Nodes<br />
+12.3. Implement a C Program to perform Heap sort both ascending and Descending order<br />
+
+Day 13 -Sorting<br />
+13.1 Bubble Sort<br />
+13.2 Insertion Sort<br />
+13.3 Radix Sort<br />
+13.4 Merge Sort<br />
+13.5 Shell Sort<br />
