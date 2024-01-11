@@ -89,3 +89,16 @@ Day 13 -Sorting<br />
 13.3 Radix Sort<br />
 13.4 Merge Sort<br />
 13.5 Shell Sort<br />
+
+Day 14 -Sorting<br />
+14.1. Implement a C Program to perform Quick Sort<br />
+14.2. Implement a C Program to perform Selection Sort<br />
+
+Day 15 -Graph<br />
+15.1. Implement a C Program to represent a Graph using Matrix<br />
+15.2. Implement a C Program to represent a Graph using Linked List<br />
+15.3. Implement a C Program to perform Topological ordering<br />
+
+Day 16 -Minimum spaning tree<br />
+16.1. Implement a C Program to find MST for the given graph using Prim's Algorithm<br />
+16.2. Implement a C Program to find MST for the given graph using Kruskal's Algorithm<br />
