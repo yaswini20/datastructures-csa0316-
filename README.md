@@ -106,3 +106,7 @@ Day 16 -Minimum spaning tree<br />
 Day 17 -Dijkstra's Algorithm<br />
 17.1. Implement a C Program to find the shortest path for the given weighted directed graph using Dijkstra's Algorithm<br />
 17.2. Implement a C Program to find MST shortest path for the given unweighted directed graph using Dijkstra's Algorithm<br />
+
+Day 18-BFS & DFS<br />
+18.1. Implement a C Program to find BFS for the given graph<br />
+18.2. Implement a C Program to find DFS for the given graph<br />
